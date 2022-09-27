@@ -33,11 +33,28 @@ namespace ConsoleUI
 
             // Create a list of Vehicle called vehicles
 
+            List<Vehicle> vehicleLot = new List<Vehicle>();
+
+
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
              * - new it up as one of each derived class
              * Set the properties with object initializer syntax
              */
+            Car whiteCar = new Car()
+            {
+                Year = "2020",
+                Make = "Mazda",
+                Model = "Hatchback",
+                numDoors = 5,
+            };
+            vehicleLot.Add(whiteCar);
+
+            Motorcycle yamaha = new Motorcycle() { Year = "2017", Make = "Yamaha", Model = "R6", hasSidecar = false };
+            vehicleLot.Add(yamaha);
+
+
+
 
             /*
              * Add the 4 vehicles to the list
