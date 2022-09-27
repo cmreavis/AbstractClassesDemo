@@ -6,16 +6,17 @@ namespace ConsoleUI
 {
     internal class Motorcycle : Vehicle
     {
-         public override void DriveAbstract(Vehicle vehicle)
+        //ctrl + . opens what you need to implement from parent class
+         public override void DriveAbstract()
         {
-            Console.WriteLine($"Riding my {Year} {Make} {Model} around town!");
+            Console.WriteLine($"Riding my motorcycle around town!");
         }
 
-        public override void DriveVirtual(Vehicle vehicle)
+        public override void DriveVirtual()
         {
-            base.DriveVirtual(vehicle);
+            Console.WriteLine("This motorcycle is being ridden around town!");
         }
 
-        public bool hasSidecar;
+        public bool hasSidecar { get; set; }    
     }
 }

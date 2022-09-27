@@ -6,13 +6,12 @@ namespace ConsoleUI
 {
     internal class Car : Vehicle
     {
-        public override void DriveAbstract(Vehicle vehicle)
+        public override void DriveAbstract()
         {
-            Console.WriteLine($"Driving around my {Year} {Make} {Model}.");
+            Console.WriteLine($"Driving around in my car!");
         }
 
-        public int numDoors;
-
+        public int numDoors { get; set; }
 
     }
 }

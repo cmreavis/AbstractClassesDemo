@@ -11,11 +11,12 @@ namespace ConsoleUI
         public string Make { get; set; } = "Fjord";
         public string Model { get; set; } = "Model Y";
 
-        public abstract void DriveAbstract(Vehicle vehicle);
-
-        public virtual void DriveVirtual(Vehicle vehicle)
+        //abstract classes can have some things abstract:
+        public abstract void DriveAbstract();
+        //as well as some virtual:
+        public virtual void DriveVirtual()
         {
-            Console.WriteLine($"Driving around town in my {vehicle.Year} {vehicle.Make} {vehicle.Model}!");
+            Console.WriteLine($"Driving around town!");
         }
 
     }

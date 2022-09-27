@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,7 +34,7 @@ namespace ConsoleUI
 
             // Create a list of Vehicle called vehicles
 
-            List<Vehicle> vehicleLot = new List<Vehicle>();
+            List<Vehicle> vehicles = new List<Vehicle>();
 
 
             /*
@@ -48,12 +49,41 @@ namespace ConsoleUI
                 Model = "Hatchback",
                 numDoors = 5,
             };
-            vehicleLot.Add(whiteCar);
+            vehicles.Add(whiteCar);
 
-            Motorcycle yamaha = new Motorcycle() { Year = "2017", Make = "Yamaha", Model = "R6", hasSidecar = false };
-            vehicleLot.Add(yamaha);
+            Motorcycle sportBike = new Motorcycle()
+            { 
+                Year = "2017", 
+                Make = "Yamaha", 
+                Model = "R6", 
+                hasSidecar = false
+            };
+            vehicles.Add(sportBike);
+
+            Vehicle smartCar = new Car()
+            {
+                Year = "2015",
+                Make = "Smart",
+                Model = "SmartCar",
+                numDoors = 5,
+            };
+            vehicles.Add(smartCar);
+
+            Vehicle tricycle = new Motorcycle()
+            {
+                Year = "2019",
+                Make = "Polaris",
+                Model = "Slingshot",
+                hasSidecar = true,
+            };
+            vehicles.Add(tricycle);
 
 
+            foreach (Vehicle vehicle in vehicles)
+            {
+                Console.WriteLine($"Year:{vehicle.Year} \nMake:{vehicle.Make} \nModel:{vehicle.Model}");
+                Console.WriteLine();
+            }
 
 
             /*
@@ -62,6 +92,12 @@ namespace ConsoleUI
              */
 
             // Call each of the drive methods for one car and one motorcycle
+
+            whiteCar.DriveAbstract();
+            sportBike.DriveAbstract();
+            smartCar.DriveAbstract();
+            tricycle.DriveAbstract();
+
 
             #endregion            
             Console.ReadLine();
